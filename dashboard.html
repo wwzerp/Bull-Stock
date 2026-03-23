@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Stock</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+
+<header>
+  <div class="logo">Bull Stock</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="markets.html">Mercados</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="login.html">Entrar</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Cabeçalho do dashboard -->
+  <div class="dashboard-header">
+    <div>
+      <h1>Dashboard</h1>
+      <p class="subtitle">Atualizado em 22 de março de 2026, 14:37</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-outline">Depósito</button>
+      <button class="btn">Levantar</button>
+      <button class="btn btn-outline">Nova Ordem</button>
+    </div>
+  </div>
+
+  <!-- Overview principal – valores aproximados março 2026 -->
+  <div class="grid-3">
+    <div class="card overview-card primary">
+      <div class="card-label">Saldo Total</div>
+      <div class="big-value">$14,920.45</div>
+      <div class="change green">+5.7% esta semana</div>
+    </div>
+
+    <div class="card overview-card">
+      <div class="card-label">Lucro/Prejuízo realizado + não realizado</div>
+      <div class="big-value green">+$2,684.30</div>
+      <div class="change green">+21.9% desde início</div>
+    </div>
+
+    <div class="card overview-card">
+      <div class="card-label">Variação 24h</div>
+      <div class="big-value red">– $348.20</div>
+      <div class="change red">–2.3%</div>
+    </div>
+  </div>
+
+  <!-- Alocação + Gráfico placeholder -->
+  <div class="grid-2">
+    <div class="card">
+      <h3>Alocação da Carteira (22/03/2026)</h3>
+      <div class="allocation-grid">
+        <div class="allocation-item">
+          <div class="color-dot crypto"></div>
+          <span>Criptomoedas</span>
+          <span class="percent">61%</span>
+        </div>
+        <div class="allocation-item">
+          <div class="color-dot stocks"></div>
+          <span>Ações / ETFs</span>
+          <span class="percent">24%</span>
+        </div>
+        <div class="allocation-item">
+          <div class="color-dot cash"></div>
+          <span>Stablecoins / USD</span>
+          <span class="percent">15%</span>
+        </div>
+      </div>
+
+      <!-- Placeholder para gráfico (ideal para Chart.js mais tarde) -->
+      <div class="chart-placeholder">
+        <div class="placeholder-text">[ Gráfico de evolução do portfólio – 30 dias ]</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Posições Abertas</h3>
+      <table class="positions-table">
+        <thead>
+          <tr>
+            <th>Ativo</th>
+            <th>Quantidade</th>
+            <th>Preço médio</th>
+            <th>Valor atual</th>
+            <th>PnL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BTC</td>
+            <td>0.197</td>
+            <td>$58 900</td>
+            <td>$13 420</td>
+            <td class="green">+$2 810 (+24.2%)</td>
+          </tr>
+          <tr>
+            <td>ETH</td>
+            <td>2.84</td>
+            <td>$2 740</td>
+            <td>$8 910</td>
+            <td class="green">+$1 130 (+14.5%)</td>
+          </tr>
+          <tr>
+            <td>NVDA</td>
+            <td>11</td>
+            <td>$138.20</td>
+            <td>$1 892</td>
+            <td class="green">+$370 (+24.3%)</td>
+          </tr>
+          <tr>
+            <td>USDC</td>
+            <td>2 238</td>
+            <td>$1.00</td>
+            <td>$2 238</td>
+            <td class="neutral">0.00%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Últimas transações -->
+  <div class="card">
+    <h3>Últimas Movimentações</h3>
+    <table class="transactions-table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Tipo</th>
+          <th>Ativo</th>
+          <th>Quantidade</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>22 Mar 2026</td>
+          <td>Compra</td>
+          <td>NVDA</td>
+          <td>4</td>
+          <td class="red">–$552.80</td>
+        </tr>
+        <tr>
+          <td>19 Mar 2026</td>
+          <td>Depósito</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="green">+$1 500.00</td>
+        </tr>
+        <tr>
+          <td>17 Mar 2026</td>
+          <td>Venda</td>
+          <td>ETH</td>
+          <td>0.65</td>
+          <td class="green">+$2 015.00</td>
+        </tr>
+        <tr>
+          <td>12 Mar 2026</td>
+          <td>Compra</td>
+          <td>BTC</td>
+          <td>0.045</td>
+          <td class="red">–$2 650.50</td>
+        </tr>
+        <tr>
+          <td>8 Mar 2026</td>
+          <td>Dividendos</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="green">+$18.40</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>

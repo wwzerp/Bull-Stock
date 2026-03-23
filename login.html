@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entrar - Bull Stock</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+
+<header>
+  <div class="logo">Bull Stock</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="markets.html">Mercados</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="login.html">Entrar</a>
+  </nav>
+</header>
+
+<div class="container login-container">
+
+  <div class="login-header">
+    <h1>Bem-vindo de volta</h1>
+    <p>Entra na tua conta para aceder ao teu portfólio</p>
+  </div>
+
+  <div class="card">
+    <form>
+      <div class="form-group">
+        <label for="email">Email ou Username</label>
+        <input type="text" id="email" placeholder="exemplo@financepro.pt" required>
+      </div>
+
+      <div class="form-group password-group">
+        <label for="password">Palavra-passe</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+        <button type="button" class="toggle-password" aria-label="Mostrar/esconder senha">👁️</button>
+      </div>
+
+      <div class="forgot-link">
+        <a href="#">Esqueci a palavra-passe?</a>
+      </div>
+
+      <button type="submit" class="btn btn-full">Entrar</button>
+    </form>
+
+    <div class="security-note">
+      🔒 As tuas informações estão encriptadas e protegidas
+    </div>
+  </div>
+
+  <div class="signup-link">
+    Ainda não tens conta? <a href="register.html">Criar conta grátis</a>
+  </div>
+
+</div>
+
+<script>
+// Mostrar/esconder password
+function togglePassword() {
+  const passInput = document.getElementById('password');
+  const toggleBtn = document.querySelector('.toggle-password');
+  if (passInput.type === 'password') {
+    passInput.type = 'text';
+    toggleBtn.textContent = '🙈';
+  } else {
+    passInput.type = 'password';
+    toggleBtn.textContent = '👁️';
+  }
+}
+
+document.querySelector('.toggle-password').addEventListener('click', togglePassword);
+
+// Toggle dark/light (opcional)
+document.getElementById('theme-toggle')?.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+});
+</script>
+
+</body>
+</html>

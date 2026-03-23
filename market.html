@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mercados - Bull Stock</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+
+<header>
+  <div class="logo">Bull Stock</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="markets.html">Mercados</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="login.html">Entrar</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- PESQUISA -->
+  <div class="card search-card">
+    <h2>Pesquisa de Ativos</h2>
+    <form class="search-form">
+      <input type="text" placeholder="Pesquise por BTC, ETH, TSLA, S&P 500..." class="input search-input">
+      <button type="submit" class="btn">Pesquisar</button>
+    </form>
+  </div>
+
+  <!-- CATEGORIAS -->
+  <div class="card categories-card">
+    <h3>Categorias</h3>
+    <div class="category-tabs">
+      <button class="btn btn-outline active">Criptomoedas</button>
+      <button class="btn btn-outline">Ações</button>
+      <button class="btn btn-outline">Índices</button>
+      <button class="btn btn-outline">Commodities</button>
+      <button class="btn btn-outline">Forex</button>
+    </div>
+  </div>
+
+  <!-- LISTA DE ATIVOS -->
+  <div class="card">
+    <h2>Lista de Ativos (Top por Market Cap / Volume)</h2>
+    <p class="subtitle">Atualizado em 22 de março de 2026 ≈ 15:30 UTC (preços aproximados de mercado)</p>
+
+    <table class="positions-table markets-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Ativo</th>
+          <th>Preço</th>
+          <th>24h %</th>
+          <th>Market Cap</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>BTC / Bitcoin</td>
+          <td>$68,400</td>
+          <td class="red">-3.0%</td>
+          <td>~$1.36T</td>
+          <td>
+            <button class="btn btn-small btn-outline">Favoritar</button>
+            <button class="btn btn-small">Ver Gráfico</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>ETH / Ethereum</td>
+          <td>$2,070</td>
+          <td class="red">-4.2%</td>
+          <td>~$250B</td>
+          <td>
+            <button class="btn btn-small btn-outline">Favoritar</button>
+            <button class="btn btn-small">Ver Gráfico</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>USDT / Tether</td>
+          <td>$1.00</td>
+          <td class="neutral">0.0%</td>
+          <td>~$140B+</td>
+          <td>
+            <button class="btn btn-small btn-outline">Favoritar</button>
+            <button class="btn btn-small">Ver Gráfico</button>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>BNB / Binance Coin</td>
+          <td>$590</td>
+          <td class="green">+1.1%</td>
+          <td>~$85-90B</td>
+          <td>
+            <button class="btn btn-small btn-outline">Favoritar</button>
+            <button class="btn btn-small">Ver Gráfico</button>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>SOL / Solana</td>
+          <td>$140</td>
+          <td class="red">-2.5%</td>
+          <td>~$65-75B</td>
+          <td>
+            <button class="btn btn-small btn-outline">Favoritar</button>
+            <button class="btn btn-small">Ver Gráfico</button>
+          </td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>S&P 500 (Índice)</td>
+          <td>6,506</td>
+          <td class="red">-1.5%</td>
+          <td>—</td>
+          <td>
+            <button class="btn btn-small btn-outline">Favoritar</button>
+            <button class="btn btn-small">Ver Gráfico</button>
+          </td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>NASDAQ Composite</td>
+          <td>~21,650</td>
+          <td class="red">-2.0%</td>
+          <td>—</td>
+          <td>
+            <button class="btn btn-small btn-outline">Favoritar</button>
+            <button class="btn btn-small">Ver Gráfico</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- GRÁFICO (placeholder maior) -->
+  <div class="card">
+    <h3>Gráfico de Mercado (exemplo BTC/USD 7 dias)</h3>
+    <div class="chart-placeholder large">
+      <div class="placeholder-text">[ Aqui vai o gráfico interativo com Chart.js ou TradingView embed – candles, volume, indicadores ]</div>
+    </div>
+    <p style="text-align: center; color: #94a3b8; margin-top: 1rem;">
+      (Em produção: gráfico dinâmico com zoom, timeframe selector, comparação de ativos)
+    </p>
+  </div>
+
+  <!-- BOTÕES / AÇÕES (exemplo global ou footer-like) -->
+  <div class="card actions-card" style="text-align: center;">
+    <h3>Ações Rápidas</h3>
+    <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0;">
+      <button class="btn">Comprar BTC</button>
+      <button class="btn">Vender ETH</button>
+      <button class="btn btn-outline">Adicionar à Watchlist</button>
+      <button class="btn btn-outline">Definir Alerta de Preço</button>
+      <button class="btn btn-outline">Ver Análise Técnica</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
